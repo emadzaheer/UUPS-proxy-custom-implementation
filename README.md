@@ -1,13 +1,10 @@
-# Sample Hardhat Project
+# UUPS proxy custom implementation using openzeppelin v5
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+This project demonstrates a basic manual script to see how a universally upgradeable proxy smart contract works. The proxy contract uses ERC1967 standard where the updateImplementation() function exists inside the implementation itself. There is no need to have an admin contract.
 
-Try running some of the following tasks:
+Configure your hardhatconfig.js file and try running:
 
 ```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
+npm i
+npx hardhat run scripts/manualProxy/ManuallyDeployV1.js
 ```
